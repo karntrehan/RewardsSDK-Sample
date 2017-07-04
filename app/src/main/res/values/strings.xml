@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RSample</string>
+    <string name="trigger">Make sure the number is first registered with the m.Paani server</string>
+</resources>
