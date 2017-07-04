@@ -1,6 +1,5 @@
 # Integration Guide
 ### Android Rewards SDK - m.Paani
-Updated in: June 2017
 
 ### Introduction
 The Rewards SDK (SDK) is a “Gift Recommendation and Redemption SDK” provided to esteemed and recognized partners (Partners) of m.Paani. The SDK is to be incorporated into your Android apps, allowing your users to view m.Paani gifts and redeem the gifts they like as well as are eligible for.
@@ -81,13 +80,13 @@ dependencies {
 4. Implement the `RedemptionResponseListener` in the Activity from where the user can start the flow of viewing and redeeming rewards. The listener has 2 callbacks.
 
     - `redemptionSuccess(TGiftSuccess tGiftSuccess)` : Callback that the redemption flow was complete. Contains:
-            - `rewardRedeemed` - Information about the reward redeemed.
-            - `memberBalance` - New member balance after redemption.
-            - `redemptionRequestId` - Redemption request id fron m.Paani
+     	- `rewardRedeemed` - Information about the reward redeemed.
+        - `memberBalance` - New member balance after redemption.
+        - `redemptionRequestId` - Redemption request id fron m.Paani
 
     - `redemptionFailed(TGiftFailed tGiftFailed)`: Callback that the redemption process failed due to various reasons. Reasons include invalid phonenumber, invalid key, etc. Contains:
-           	- `failCode` - Failure reason code
-            - `failedReason` - Failure reason message
+       - `failCode` - Failure reason code
+       - `failedReason` - Failure reason message
 
 5. Add the following line to initialize the SDK flow:
 ```java
@@ -114,41 +113,9 @@ Rewards.getInstance().build(context, "9898989898", this);
 
 
 #### Complete Example
-```java
-package com.mpaani.rewards.sample;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.Toast;
+A complete working example can found in the [RSampleActivity.java](https://github.com/karntrehan/RewardsSDK-Sample/blob/master/app/src/main/java/com/mpaani/rsample/RSampleActivity.java)
 
-import com.mpaani.rewards.RedemptionResponseListener;
-import com.mpaani.rewards.Rewards;
-import com.mpaani.rewards.entities.TGiftFailed;
-import com.mpaani.rewards.entities.TGiftSuccess;
-
-public class SampleActivity
-                        extends AppCompatActivity
-                        implements RedemptionResponseListener {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sample);
-
-        Rewards.getInstance().build(this, "9898989898", this);
-    }
-
-    @Override
-    public void redemptionSuccess(TGiftSuccess tGiftSuccess) {
-        Toast.makeText(this, tGiftSuccess.toString(), Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void redemptionFailed(TGiftFailed tGiftFailed) {
-        Toast.makeText(this, tGiftFailed.toString(), Toast.LENGTH_SHORT).show();
-    }
-}
-```
 
 #### Customization
 You can change the colors of the SDK to match your app's theme. To change the colors, add the following colors to your `colors.xml` file
