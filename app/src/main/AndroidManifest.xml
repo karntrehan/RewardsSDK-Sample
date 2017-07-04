@@ -12,7 +12,7 @@
 
         <meta-data
             android:name="com.mpaani.rewards.ApiKey"
-            android:value="the_mobile_wallet_test_954af11baedcc8366d9852af33ee265dcd3aefdb" />
+            android:value="{Your_API_KEY}" />
 
 
         <activity android:name=".RSampleActivity">
