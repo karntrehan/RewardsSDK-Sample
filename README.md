@@ -79,7 +79,7 @@ dependencies {
 *Make sure to use the latest version of the SDK*
  [ ![Download](https://api.bintray.com/packages/mpaani/Rewards/rewards/images/download.svg) ](https://bintray.com/mpaani/Rewards/rewards/_latestVersion)
 
-4. Implement the `RedemptionResponseListener` in the Activity from where the user can start the flow of viewing and redeeming rewards. The listener has 2 callbacks.
+4. Implement the `MPRedemptionResponseListener` in the Activity from where the user can start the flow of viewing and redeeming rewards. The listener has 2 callbacks.
 
     - `redemptionSuccess(TGiftSuccess tGiftSuccess)` : Callback that the redemption flow was complete. Contains:
      	- `rewardRedeemed` - Information about the reward redeemed.
@@ -96,7 +96,7 @@ Rewards.getInstance().build(context, "9898989898", this);
 ```
  - `context`: Context of the current activity
  - `9898989898`: Replace with the phonenumber of the member
- - `this`: Instance of the `RedemptionResponseListener`
+ - `this`: Instance of the `MPRedemptionResponseListener`
 
 *Make sure the phonenumber entered by you is already registered with us using the server API.*
 
