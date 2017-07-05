@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="r_colorPrimary">@color/colorPrimary</color>
+    <color name="r_colorPrimaryDark">@color/colorPrimaryDark</color>
+    <color name="r_colorPrimaryLight">#F0F7FC</color>
+    <color name="r_colorAccent">@color/colorAccent</color>
+    <color name="r_colorAccent_faded">#99FF4357</color>
 </resources>

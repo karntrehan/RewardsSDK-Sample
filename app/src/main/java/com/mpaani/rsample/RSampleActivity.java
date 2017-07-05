@@ -10,12 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.mpaani.rewards.RedemptionResponseListener;
+import com.mpaani.rewards.MPRedemptionResponseListener;
 import com.mpaani.rewards.Rewards;
 import com.mpaani.rewards.entities.TGiftFailed;
 import com.mpaani.rewards.entities.TGiftSuccess;
 
-public class RSampleActivity extends AppCompatActivity implements RedemptionResponseListener {
+public class RSampleActivity extends AppCompatActivity implements MPRedemptionResponseListener{
 
     TextInputEditText edtPhoneNumber;
     TextInputLayout tilPhoneNumber;
@@ -46,15 +46,18 @@ public class RSampleActivity extends AppCompatActivity implements RedemptionResp
 
     }
 
+    //Initiate the SDK with the member's phone-number
     private void performRedemption(String phoneNumber) {
         Rewards.getInstance().build(context, phoneNumber, this);
     }
 
+    //Get a callback from the SDK when the process ends with a success
     @Override
     public void redemptionSuccess(TGiftSuccess tGiftSuccess) {
         Toast.makeText(this, "Success! " + tGiftSuccess.toString(), Toast.LENGTH_SHORT).show();
     }
 
+    //Get a callback from the SDK when the process ends with a failure
     @Override
     public void redemptionFailed(TGiftFailed tGiftFailed) {
         Toast.makeText(this, "Failed! " + tGiftFailed.toString(), Toast.LENGTH_SHORT).show();

@@ -19,6 +19,7 @@ android {
     }
 }
 
+//Add this to your module level build.gradle file
 repositories {
     maven { url "http://dl.bintray.com/mpaani/Rewards" }
 }
@@ -32,5 +33,6 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
 
-    compile 'com.mpaani:rewards:0.0.3'
+    //SDK dependency
+    compile 'com.mpaani:rewards:0.9.0'
 }

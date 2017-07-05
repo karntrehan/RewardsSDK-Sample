@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <!--Replace {YOUR_API_KEY} with a valid API key pro-->
         <meta-data
             android:name="com.mpaani.rewards.ApiKey"
             android:value="{Your_API_KEY}" />
