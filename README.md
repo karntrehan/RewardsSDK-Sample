@@ -2,7 +2,9 @@
 ### Android Rewards SDK - m.Paani
 
 ### Introduction
-The Rewards SDK (SDK) is a “Gift Recommendation and Redemption SDK” provided to esteemed and recognized partners (Partners) of m.Paani. The SDK is to be incorporated into your Android apps, allowing your users to view m.Paani gifts and redeem the gifts they like as well as are eligible for.
+The Rewards SDK (SDK) is a “Gift Recommendation and Redemption SDK” provided to partners (Partners) of m.Paani. The SDK is to be incorporated into your Android apps, allowing your users to view m.Paani gifts and redeem the gifts they like as well as are eligible for. 
+
+This sample app demonstrates how partners can integrate the RewardsSDK into their apps.
 
 #### SDK tech specifications
 The SDK is written completely in native Java and XML following the MVP architecture.
@@ -40,8 +42,8 @@ Both staging and production would have the same code and flow, just separate DBs
 
 #### Pre-Requisites
 
- - **User needs to be registered already**: *Look at the Server Integration guide to know how to register users and give them points.*
- - **You need to have an API key**:  *We provide you 2 sets of keys. One for production and one for staging. If you haven’t received it yet, request for one right now!*
+ - **Test User needs to be registered**: *Look at the Server Integration guide to know how to register users and give them points.*
+ - **You need to have an API key**:  *We provide 2 sets of keys. One for production and one for staging. If you haven’t received it yet, request for one right now!*
 
 ### Integration
 Integrating the SDK into your app is a 6 step process.
@@ -71,7 +73,7 @@ repositories {
 ```gradle
 dependencies {
 	....
-	compile 'com.mpaani.rewards:rewards:0.0.3
+	compile 'com.mpaani.rewards:rewards:0.9.0'
 }
 ```
 *Make sure to use the latest version of the SDK*
@@ -114,7 +116,7 @@ Rewards.getInstance().build(context, "9898989898", this);
 
 #### Complete Example
 
-A complete working example can found in the [RSampleActivity.java](https://github.com/karntrehan/RewardsSDK-Sample/blob/master/app/src/main/java/com/mpaani/rsample/RSampleActivity.java)
+A complete working example can found in the [RSampleActivity.java](https://github.com/mpaani/RewardsSDK-Sample/blob/master/app/src/main/java/com/mpaani/rsample/RSampleActivity.java)
 
 
 #### Customization
