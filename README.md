@@ -73,7 +73,7 @@ repositories {
 ```gradle
 dependencies {
 	....
-	compile 'com.mpaani.rewards:rewards:0.9.0'
+	compile 'com.mpaani.rewards:rewards:0.9.1'
 }
 ```
 *Make sure to use the latest version of the SDK*
@@ -84,7 +84,7 @@ dependencies {
     - `redemptionSuccess(TGiftSuccess tGiftSuccess)` : Callback that the redemption flow was complete. Contains:
      	- `rewardRedeemed` - Information about the reward redeemed.
         - `memberBalance` - New member balance after redemption.
-        - `redemptionRequestId` - Redemption request id fron m.Paani
+        - `redemptionRequestId` - Redemption request id from m.Paani
 
     - `redemptionFailed(TGiftFailed tGiftFailed)`: Callback that the redemption process failed due to various reasons. Reasons include invalid phonenumber, invalid key, etc. Contains:
        - `failCode` - Failure reason code
