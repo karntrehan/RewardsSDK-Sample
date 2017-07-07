@@ -43,7 +43,7 @@ Both staging and production would have the same code and flow, just separate DBs
 #### Pre-Requisites
 
  - **Test User needs to be registered**: *Look at the Server Integration guide to know how to register users and give them points.*
- - **You need to have an API key**:  *We provide 2 sets of keys. One for production and one for staging. If you haven’t received it yet, request for one right now!*
+ - **You need to have an API key**:  *We provide 2 sets of keys. One for production and one for staging. If you haven’t received it yet, request for one right now at operations@mpaani.com!*
 
 ### Integration
 Integrating the SDK into your app is a 6 step process.
@@ -73,7 +73,7 @@ repositories {
 ```gradle
 dependencies {
 	....
-	compile 'com.mpaani.rewards:rewards:0.9.1'
+	compile 'com.mpaani:rewards:0.9.1'
 }
 ```
 *Make sure to use the latest version of the SDK*
